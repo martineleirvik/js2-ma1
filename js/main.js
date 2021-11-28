@@ -1,10 +1,12 @@
-const url = "https://fakestoreapi.com/products";
+import { renderProp } from "./ui/renderproperties.js";
+import { searchProp } from "./ui/searchproperties.js"
 
-const resultContainer = document.querySelector(".container");
+
+const url = "https://fakestoreapi.com/products";
 
 async function getProp() {
 
-    
+    try {
 
         const response = await fetch(url);
 
@@ -12,19 +14,13 @@ async function getProp() {
 
         console.log(results);
 
-        resultContainer.innerHTML = "";
+        renderProp(results);
+        searchProp(results);
 
-        for (let i = 0; i < results.length; i++) {
-            console.log(results[i].title);
-            console.log(results[i].price);
+    } catch (error) {
+        console.log(error);
 
-            resultContainer.innerHTML += `<div class="card">
-                                            <h2>${results[i].title}</h2>
-                                            <p> Price: ${results[i].price}</p>                                        
-                                        </div>`
-        }
-
-    
+    }   
     
 }
 
