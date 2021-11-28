@@ -3,7 +3,7 @@
 }
 
 body {
-    background: rgb(211, 211, 211);
+    background: rgb(243, 243, 243);
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
@@ -21,12 +21,7 @@ p {
     font-size: 0.8rem;
 }
 
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.container {
+.wrapper, .container {
     display: flex;
     flex-wrap: wrap;
 }
@@ -35,6 +30,7 @@ p {
     margin: 1rem;
     padding: 1rem;
     max-width: 200px;
+    background: rgb(211, 211, 211);
     border: 1px solid #666;
     border-radius: 1rem;
 }

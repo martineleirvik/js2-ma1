@@ -19,7 +19,6 @@ async function getProp() {
 
     } catch (error) {
         console.log(error);
-
     }   
     
 }

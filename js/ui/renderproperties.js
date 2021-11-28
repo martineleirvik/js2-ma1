@@ -6,7 +6,7 @@ export function renderProp(propToRender) {
     propToRender.forEach(function (card) {
         resultContainer.innerHTML += `<div class="card">
                                         <h2>${card.title}</h2>
-                                        <p> Price: ${card.price}</p>                                        
+                                        <p> Price: $${card.price}</p>                                        
                                     </div>`
     });
 }
